@@ -1,4 +1,4 @@
-*.java
 pyvenv.cfg
 Lib/
 Scripts/
+Include/
