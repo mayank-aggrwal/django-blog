@@ -1,0 +1,57 @@
+
+Install Python :
+----------------
+From official website
+
+
+To check version of Python :
+----------------------------- 
+py --version
+python --version
+
+
+Create a virtual environment :
+------------------------------
+py -m venv blog_app
+
+
+To activate virtual-environment :
+---------------------------------
+.\blog_app\Scripts\activate
+
+
+To deactivate virtual-environment :
+---------------------------------
+.\blog_app\Scripts\deactivate
+
+
+To install django :
+-------------------
+py -m pip install django
+django --version
+
+
+While activating if terminal shows, "running scripts is disabled on this system"
+--------------------------------------------------------------------------------
+There are 4 policy levels to choose from. From most secure to most insecure:
+1. Restricted: No Powershell scripts can be run. This is the default setting.
+2. AllSigned: Scripts can be run, but all must have a digital signature. Even if you wrote the script yourself on the local computer.
+3. RemoteSigned: Locally-written scripts can be run. But scripts from outside (email, IM, Internet) must be signed by a trusted publisher.
+4. Unrestricted: Any script will run. Regardless of who created them or whether they are signed. 
+
+    To view the current systemwide Execution Policy setting :
+    ---------------------------------------------------------
+    Get-ExecutionPolicy
+
+    To set execution policy :
+    -------------------------
+    Set-ExecutionPolicy remotesigned
+
+Touch alternative in windows powershell :
+-----------------------------------------
+$null > file_name.cpp
+
+Configure GIT :
+---------------
+git config --global user.email "user_mail"
+git config --global user.name "user_name"
