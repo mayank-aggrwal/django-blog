@@ -8,6 +8,17 @@
 <body>
 
     <h1>ARTICLES</h1>
+    <hr/>
+
+    {% for article in articles %}
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.body }}</p>
+        <p>{{ article.slug }}</p>
+        <p>{{ article.date }}</p>
+        <hr/>
+        <br/>
+    {% endfor %}
+
     
 </body>
 </html>
