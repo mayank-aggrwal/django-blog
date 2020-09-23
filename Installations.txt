@@ -24,6 +24,9 @@ To deactivate virtual-environment :
 ---------------------------------
 .\blog_app\Scripts\deactivate
 
+To install a package in virtual environment :
+---------------------------------------------
+py -m pip install package_name
 
 To install django :
 -------------------
