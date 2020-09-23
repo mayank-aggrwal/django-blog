@@ -3,11 +3,8 @@
 
 {% block content %}
 
-    <h1>ARTICLES</h1>
-    <hr/>
-
     {% for article in articles %}
-        <h3>{{ article.title }}</h3>
+        <h3><a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a></h3>
         <p>{{ article.snippet }}</p>
         <p>{{ article.slug }}</p>
         <p>{{ article.date }}</p>

@@ -8,7 +8,9 @@ def articles_list(request):
     return render(request, 'articles/articles_list.html', { 'articles': articles })
     
 def article_detail(request, slug):
-    return HttpResponse(slug)
+    article = Article.objects.get(slug=slug)
+    return render(request, 'articles/article_detail.html', { 'article': article })
+    # return HttpResponse(slug)
 
 def article_detail_year(request, slug, yr):
     res = str(slug) + str(yr)
