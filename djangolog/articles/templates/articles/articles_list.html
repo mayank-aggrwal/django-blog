@@ -1,16 +1,7 @@
 
-{% comment %} {% load static from staticfiles %} {% endcomment %}
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Articles</title>
-</head>
-<body>
+{% block content %}
 
     <h1>ARTICLES</h1>
     <hr/>
@@ -23,6 +14,5 @@
         <hr/>
         <br/>
     {% endfor %}
-    
-</body>
-</html>
+
+{% endblock %}
