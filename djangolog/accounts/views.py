@@ -24,8 +24,12 @@ def login_page(request):
             print('form is valid')
             user = form.get_user()
             login(request, user)
-            print('redirecting')
-            return redirect('articles:list')
+            print('redirecting:')
+            if 'next' in request.POST:
+                # print('Next is in POST :', request.POST.get('next'))
+                return redirect(request.POST.get('next'))
+            else:          
+                return redirect('articles:list')
         else:
             print('form is invalid')
     else:
