@@ -5,4 +5,10 @@
 
     <h1>Create an ARTICLE</h1>
 
+    <form id="create-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="create">
+    </form>
+
 {% endblock %}
