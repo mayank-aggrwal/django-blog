@@ -60,3 +60,16 @@ git config --global user.email "user_mail"
 git config --global user.name "user_name"
 
 NOTE: Make .gitignore file after initialising the GIT repository
+
+To run the application server :
+-------------------------------
+python manage.py runserver
+
+For migrating the models to the database :
+------------------------------------------
+python manage.py makemigrations
+python manage.py migrate
+
+While making a POST request through a form to the server, include :
+-------------------------------------------------------------------
+{% csrf_token %}
