@@ -10,6 +10,37 @@
             <p>{{ article.date }}</p>
             <p>{{ article.body }}</p>
         </div>    
+
+
+        <hr />
+        <hr />
+
+        <h3>COMMENTS</h3>
+        {% for comment in comments %}
+
+        <div id="comment">
+        <p>{{ comment.author }}</p>
+        <p>{{ comment.date }}</p>
+        <p>{{ comment.body }}</p>
+        </div>
+        <hr />
+
+        {% endfor %}
+
+        <hr />
+        <hr />
+
+        {% if user.is_authenticated %}
+        <div id="comment-form">
+            <form id="create-form" action="{% url 'articles:comment' slug=article.slug %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="POST">
+            </form>
+        </div>
+        {% else %}
+        <div>Login to comment</div>
+        {% endif %}
     </div>
 
 {% endblock %}

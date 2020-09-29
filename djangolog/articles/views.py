@@ -1,8 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Article
+from .models import Comment
 from django.contrib.auth.decorators import login_required
 from .forms import CreateArticleForm
+from .forms import CreateCommentForm
 
 # Create your views here.
 def articles_list(request):
@@ -11,7 +13,9 @@ def articles_list(request):
     
 def article_detail(request, slug):
     article = Article.objects.get(slug=slug)
-    return render(request, 'articles/article_detail.html', { 'article': article })
+    form = CreateCommentForm()
+    comments = Comment.objects.filter(slug=slug)
+    return render(request, 'articles/article_detail.html', { 'article': article, 'form': form, 'comments': comments })
     # return HttpResponse(slug)
 
 def article_detail_year(request, slug, yr):
@@ -30,3 +34,14 @@ def article_create(request):
     else:
         form = CreateArticleForm()
     return render(request, 'articles/article_create.html', { 'form': form })
+
+def article_comment(request, slug):
+    if request.method == 'POST':
+        form = CreateCommentForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.author = request.user
+            instance.slug = slug
+            instance.save()
+            return redirect('/articles/' + slug)
+    # return render(request, 'articles/article_create.html', { 'form': form })
