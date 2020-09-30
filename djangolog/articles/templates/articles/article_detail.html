@@ -3,6 +3,13 @@
 
 {% block content %}
 
+    {% if user.is_authenticated and article.author.username == user.username %}
+    <form action="{% url 'articles:edit' slug=article.slug %}" method="get">
+        {% csrf_token %}
+        <input type="submit" value="EDIT" >
+    </form>
+    {% endif %}
+
     <div id="article-detail">
         <div id="detail">
             <h2>{{ article.title }}</h2>
@@ -14,6 +21,7 @@
 
         <hr />
         <hr />
+
 
         <h3>COMMENTS</h3>
         {% for comment in comments %}
