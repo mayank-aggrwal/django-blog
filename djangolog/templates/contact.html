@@ -1,0 +1,17 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>CONTACT ME</h3>
+
+    {% comment %} Name, Email, Message {% endcomment %}
+    <form action="{% url 'contact' %}" method="post">
+    {% csrf_token %}
+    <input name="name" placeholder="Enter your name">
+    <input name="email" placeholder="Enter your email">
+    <input name="message" placeholder="Enter your message">
+    <input type="submit" value="SEND">
+    </form>
+
+{% endblock %}
