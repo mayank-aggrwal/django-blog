@@ -73,3 +73,11 @@ python manage.py migrate
 While making a POST request through a form to the server, include :
 -------------------------------------------------------------------
 {% csrf_token %}
+
+To list all the branches in the git repository:
+-----------------------------------------------
+git branch -a
+
+To see branch graphs in git:
+----------------------------
+git log --graph --oneline --decorate --all

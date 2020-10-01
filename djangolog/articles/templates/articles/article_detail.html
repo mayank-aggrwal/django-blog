@@ -4,10 +4,11 @@
 {% block content %}
 
     {% if user.is_authenticated and article.author.username == user.username %}
-    <form action="{% url 'articles:edit' slug=article.slug %}" method="get">
+    <form action="{% url 'articles:edit_form' slug=article.slug %}" method="get">
         {% csrf_token %}
         <input type="submit" value="EDIT" >
     </form>
+    {% comment %} <p><a href="{% url 'articles:edit' slug=article.slug %}">EDIT</a></p> {% endcomment %}
     {% endif %}
 
     <div id="article-detail">
