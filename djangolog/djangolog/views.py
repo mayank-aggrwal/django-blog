@@ -26,11 +26,13 @@ def contact(request):
         message = request.POST['message']
         subject = "Djangolog User Contact"
         message_body = 'Someone is trying to connect with you\n\nName: ' + name + '\nEmail: ' + email + '\nMessage:\n' + message + '\n\nYours sincerely\nDjangolog'
-
         email_from = settings.EMAIL_HOST_USER
         recipient_list = ['mayankaggarwal018@gmail.com']
+
         # Email with the details
         send_mail(subject, message_body, email_from, recipient_list)
+
+        # Send acknowledment email to user
         sendAcknowledgementEmail(name, email)
         return redirect('articles:list')
     else:
