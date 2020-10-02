@@ -55,13 +55,13 @@ def article_edit(request, slug):
         print(request.FILES)
         article.title = request.POST['title']
         article.body = request.POST['body']
-        article.thumb = request.FILES['thumb']
+        if request.FILES.get('thumb') is not None:
+            article.thumb = request.FILES['thumb']
         article.save()
         return redirect('/articles/' + slug)
     else:
         article = Article.objects.get(slug=slug)
         # Make form with filled values of the article
         print(article.thumb)
-        form = EditArticleForm()
-        form.setValues(article.title, article.body, article.thumb)
+        form = EditArticleForm(initial={'title': article.title, 'body': article.body, 'thumb': article.thumb})
         return render(request, 'articles/article_edit.html', { 'form': form, 'old_slug': slug })
