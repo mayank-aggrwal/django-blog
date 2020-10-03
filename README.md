@@ -4,7 +4,7 @@
 Djangolog is a blogging application built using the django framework in Python
 
 ## Features
----------
+
 1. User login
 2. Creating articles
 3. Editing existing articles
@@ -12,7 +12,7 @@ Djangolog is a blogging application built using the django framework in Python
 5. Contact me form
 
 ## Installation
---------
+
 1. From the main working directory, run the below commands
     ```bash
     python manage.py makemigrations
@@ -29,9 +29,9 @@ Djangolog is a blogging application built using the django framework in Python
     ```
 
 ## Additional instructions
-------
+
 ### Install Python :
-From official website
+From [official website](https://www.python.org/downloads/)
 
 
 ### To check version of Python :
@@ -94,7 +94,8 @@ git config --global user.email "user_mail"
 git config --global user.name "user_name"
 ```
 
-NOTE: Make .gitignore file after initialising the GIT repository
+###### NOTE: Make .gitignore file after initialising the GIT repository
+<br>
 
 ### To run the application server :
 ```bash
@@ -122,15 +123,30 @@ git branch -a
 git log --graph --oneline --decorate --all
 ```
 
+### To see all remotes
+```bash
+git remote -v
+```
+
+### To push all branches to remote repository
+```bash
+git push --all remote-origin
+```
+
+### To add a new remote to push changes to
+```bash
+git remote add new-remote-origin-name https://github.com/user_name/repo.git
+```
+
 ### If you happen to delete db.sqlite3 file, run:
 ```bash
 python manage.py migrate
 ```
 
 ## Contributing
------
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
------
+
 [MIT](https://choosealicense.com/licenses/mit/)
