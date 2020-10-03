@@ -11,3 +11,9 @@ class CreateCommentForm(forms.ModelForm):
     class Meta:
         model = models.Comment
         fields = ['body']
+
+class EditArticleForm(forms.ModelForm):
+    class Meta:
+        model = models.Article
+        fields = ['title', 'body', 'thumb']
+    

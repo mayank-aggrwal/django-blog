@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>EDIT an ARTICLE</h1>
+
+    <form id="create-form" action="{% url 'articles:edit_form' slug=old_slug %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="EDIT">
+    </form>
+
+{% endblock %}
