@@ -1,4 +1,13 @@
 
+For running the application:
+----------------------------
+1) From the main working directory, run the below commands
+    python manage.py makemigrations
+    python manage.py migrate
+2) Set the username and password in settings.py file for sending make_list
+3) To start the server, run
+    python manage.py runserver
+
 Install Python :
 ----------------
 From official website
@@ -81,3 +90,11 @@ git branch -a
 To see branch graphs in git:
 ----------------------------
 git log --graph --oneline --decorate --all
+
+To create a superuser to log in to django-admin:
+------------------------------------------------
+python manage.py createsuperuser
+
+If you delete db.sqlite3 file, or are using the application for the first time, run:
+------------------------------------------------------------------------------------
+python manage.py migrate
