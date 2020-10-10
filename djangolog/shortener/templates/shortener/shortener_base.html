@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <h2>URL-SHORTENER</h2>
+
+    <form id="shortener-form">
+        <label for="url">URL: </label>
+        <input type="text" id="url" name="url"><br>
+        <label for="code">Custom code: </label>
+        <input type="text" id="code" name="code"><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+    <div id="errors"></div>
+
+    <script type="text/javascript" src="{% static 'index.js' %}"></script>
+
+{% endblock %}

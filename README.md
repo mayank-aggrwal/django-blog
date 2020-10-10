@@ -66,6 +66,13 @@ py -m pip install django
 django --version
 ```
 
+### To start a new app :
+```bash
+python manage.py startapp your_app_name
+```
+Then make an entry for the app in the INSTALLED_APPS section in settings.py
+Include URL's of your new app using include() in url.py (main app)
+
 ### While activating if terminal shows, "running scripts is disabled on this system"
 There are 4 policy levels to choose from. From most secure to most insecure:
 1. Restricted: No Powershell scripts can be run. This is the default setting.

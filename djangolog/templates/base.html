@@ -36,6 +36,9 @@
                 {% endif %}
 
                 <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                
+                {% comment %} URL Shortener link {% endcomment %}
+                <li><a href="{% url 'shortener:short' %}">URL-SHORTENER</a></li>
 
             </ul>
         </nav>
@@ -46,6 +49,5 @@
         {% block content %}
         {% endblock %}
     </div>
-    
 </body>
 </html>

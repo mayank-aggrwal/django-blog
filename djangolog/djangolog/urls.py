@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('articles/', include('articles.urls')),
     path('accounts/', include('accounts.urls')),
+    path('shortener/', include('shortener.urls')),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about),
     path('', article_views.articles_list, name='home'),

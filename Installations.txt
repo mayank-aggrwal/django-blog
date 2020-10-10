@@ -45,6 +45,9 @@ To install django :
 py -m pip install django
 django --version
 
+To start a new app :
+--------------------
+python manage.py startapp your_app_name
 
 While activating if terminal shows, "running scripts is disabled on this system"
 --------------------------------------------------------------------------------
