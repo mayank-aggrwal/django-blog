@@ -1,5 +1,9 @@
 
-# Djangolog
+# 💻 Djangolog
+
+[![](https://img.shields.io/badge/python-3.8.5-blue)](https://python.org/downloads/)
+[![](https://img.shields.io/badge/django-3.1.1-brightgreen)](https://python.org/downloads/)
+[![](https://img.shields.io/apm/l/vim-mode.svg)](https://choosealicense.com/licenses/mit/)
 
 Djangolog is a blogging application built using the django framework in Python
 
@@ -12,7 +16,7 @@ Djangolog is a blogging application built using the django framework in Python
 5. Contact me form
 
 ## Installation
-
+> Make sure python3 and git is installed.
 1. From the main working directory, run the below commands
     ```bash
     python manage.py makemigrations
@@ -64,6 +68,11 @@ py -m pip install package_name
 ```bash
 py -m pip install django
 django --version
+```
+
+### To check django version :
+```bash
+py -m django --version
 ```
 
 ### To start a new app :
