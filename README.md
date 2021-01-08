@@ -138,6 +138,11 @@ git checkout <branch-name>
 ```bash
 git branch -a
 ```
+### To lists all the modules installed for the project:
+```bash
+py -m pip freeze
+py -m pip list
+```
 
 ### To merge a branch into master branch:
 > Change to master branch
