@@ -2,7 +2,7 @@
 # 💻 Djangolog
 
 [![](https://img.shields.io/badge/python-3.8.5-blue)](https://python.org/downloads/)
-[![](https://img.shields.io/badge/django-3.1.1-brightgreen)](https://python.org/downloads/)
+[![](https://img.shields.io/badge/django-3.1.1-brightgreen)](https://www.djangoproject.com/)
 [![](https://img.shields.io/apm/l/vim-mode.svg)](https://choosealicense.com/licenses/mit/)
 
 Djangolog is a blogging application built using the django framework in Python
@@ -129,9 +129,21 @@ python manage.py migrate
 {% csrf_token %}
 ```
 
+### To checkout a particular branch:
+```bash
+git checkout <branch-name>
+```
+
 ### To list all the branches in the git repository:
 ```bash
 git branch -a
+```
+
+### To merge a branch into master branch:
+> Change to master branch
+```bash
+git checkout master
+git merge <branch-name>
 ```
 
 ### To see branch graphs in git:
@@ -146,7 +158,7 @@ git remote -v
 
 ### To push all branches to remote repository
 ```bash
-git push --all remote-origin
+git push --all <remote-origin>
 ```
 
 ### To add a new remote to push changes to
